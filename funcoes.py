@@ -11,7 +11,7 @@ def add_dict(crime,total):
 #Retorna as regiões 
 def get_regiao():
     regioes = list()
-    arquivo = csv.reader(open('13.exercicio\_reccrimepfa-210901-151708.csv'), delimiter = ',')
+    arquivo = csv.reader(open('.\_reccrimepfa-210901-151708.csv'), delimiter = ',')
     for [data, pfa, regiao, crime, total] in arquivo: 
         igual = False        
         if not regioes:
@@ -32,5 +32,3 @@ def process_time():
     data = datetime.datetime.now()
     data = data.strftime('%d/%m/%Y %H:%M')
     return data
-
-

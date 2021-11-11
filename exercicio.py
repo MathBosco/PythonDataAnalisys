@@ -10,7 +10,7 @@ for r in reg_dict:
     reg_dict[r]['region'] = r
     reg_dict[r]['crimes'] = list()
 
-    arquivo = csv.reader(open('13.exercicio\_reccrimepfa-210901-151708.csv'), delimiter = ',')
+    arquivo = csv.reader(open('./_reccrimepfa-210901-151708.csv'), delimiter = ',')
     for [data, pfa, regiao, crime, total] in arquivo: 
         alerta = False  
         if regiao == r:
@@ -28,7 +28,7 @@ for item in list(dict(reg_dict)):
     if len(reg_dict[item]['crimes']) < 2:
         reg_dict.pop(item)
 
-with open('13.exercicio\saida.JSON', 'w+') as writer:
+with open('.\saida.JSON', 'w+') as writer:
     for item in reg_dict:
         writer.write('\n' + str(reg_dict[item]))
 
